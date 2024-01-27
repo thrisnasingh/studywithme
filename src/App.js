@@ -6,6 +6,8 @@ import stickies from './assets/stickies.png';
 import color from './assets/color.png';
 import landing from './assets/landing.png';
 import ColorSelector from './ColorSelector'
+import Timerbreak from './Timerbreak';
+import Timer from './Timersession';
 import './App.css';
 
 
@@ -18,6 +20,20 @@ function App() {
     setSelectedColor(color);
     document.body.style.backgroundColor = color; // Change background color
   };
+  const [timerStarted, setTimerStarted] = useState(false);
+  const [isBreak, setIsBreak] = useState(false);
+
+
+  const handleBeginSession = () => {
+    setTimerStarted(true);
+    setIsBreak(false);
+  };
+
+  const handleBeginBreak = () => {
+    setTimerStarted(true);
+    setIsBreak(true);
+  };
+
   // Declare variables
 
 
@@ -41,17 +57,24 @@ function App() {
           <img src={music} className="btn" alt="music" />
         </div>
       </div>
-      
+
+      {timerStarted ? (
+        isBreak ? <Timerbreak /> : <Timer />
+      ) : (
 
       <div className='session-start'>
 
         
         <img src={landing} className="home-img" alt="start session image" />
         <div className='start-btn'>
-          <p>Begin new study session</p>
+            
+          <p onClick={handleBeginSession}>Begin new study session</p>
+            {/*<button onClick={handleBeginBreak}>Take a break</button> */}
+          
         </div>
 
       </div>
+      )}
 
 {/* 
         <div className='set-time'>
