@@ -10,6 +10,9 @@ import ColorSelector from './ColorSelector';
 import Music from './music'
 import Timerbreak from './Timerbreak';
 import Timer from './Timersession';
+import HomeContainer from './containers/HomeContainer';
+import ReadingContainer from './containers/ReadingContainer';
+import ToiletBreakContainer from './containers/ToiletBreakContainer';
 import './App.css';
 import Todolist from './todo';
 import HomeTimer from './HomeTimer'
@@ -68,40 +71,7 @@ function App() {
           <img src={music} className="btn" alt="music" />
         </div>
       </div>
-      {timerStarted ? (
-        isBreak ? <Timerbreak /> : <Timer />
-      ) : (
-
-      <div className='study-session'>
-        <div className='study-options'>
-          <div className='timer-container'>
-            <HomeTimer />
-          </div>
-          <div className='avatar-container'>
-            <AvatarCarousel />
-          </div>
-          <div className='todo-container'>
-            <p className='todo-text'>To-do</p>
-              
-            <img src={todo} className="todo-img" alt="todo image"/> 
-            <Todolist />
-          </div>
-          
-        </div>
-       <div className='start-btn'>
-            
-          <p onClick={handleBeginSession}>Begin new study session</p>
-            {/*<button onClick={handleBeginBreak}>Take a break</button> */}
-          
-        </div>
-
-      </div>
-      )}
-
-{/* 
-        <div className='set-time'>
-        
-        </div> */}
+<HomeContainer />
     
   </div>
       

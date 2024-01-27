@@ -99,9 +99,9 @@ const Timer = () => {
 
 	return (
 		<div className="study-session-container">
-			<img src={cattable} className="cat-table"/>
+	
 			<div className="small-timer-container">
-				<img src={end} className="end-btn" />
+			
 				
 				
 				<div className='small-timer-btn'>
@@ -110,13 +110,14 @@ const Timer = () => {
 				</div>
 				<img src={smalltimer} className="small-timer"/>
 				<div className="actual-timer">{timer}</div>
-				<img src={toilet} className="toilet-btn" />
+			
 				
 			</div>
 			
 			{/* <button onClick={onClickReset}>Reset</button> */}
 		</div>
-	);
+	  );
+	  
 };
 
 export default Timer;
