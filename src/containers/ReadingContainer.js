@@ -35,7 +35,9 @@ const ReadingContainer = ({ currentAvatarIndex }) => {
     buttonClick ? (
       isToiletBreak ? ( 
         <div>
-          <ToiletBreakContainer/>
+          <ToiletBreakContainer
+          currentAvatarIndex={currentAvatarIndex}
+          />
         </div>
       ) : (
         <div>
