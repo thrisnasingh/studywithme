@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+.timer-container{
+    position:relative;
+}
+
+.min-label{
+    font-size:6vh;
+    rotate:-3deg;
+    font-family: 'VT323';
+    position:absolute;
+    text-align: center;
+    z-index:20;
+    left:51%;
+    top: 72%;
+}
+
+#timer-value{
+    font-size:25vh;
+    width:50%;
+    rotate:-7deg;
+    font-kerning: ;
+    font-family: 'VT323';
+    letter-spacing: -2vh;
+    position:absolute;
+    text-align: center;
+    z-index:10;
+    left:27%;
+    top: 4%;
+}

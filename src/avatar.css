@@ -1,0 +1,12 @@
+
+.avatar-img{
+    width: 30vh;
+    margin: auto -32px;
+    transition: transform 0.2s;
+}
+
+.avatar-img:hover{
+    transform: scale(1.05);
+    transform:translateZ(10)
+}
+

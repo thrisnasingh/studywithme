@@ -4,12 +4,15 @@ import help from './assets/help.png';
 import music from './assets/music.png';
 import stickies from './assets/stickies.png';
 import color from './assets/color.png';
-import landing from './assets/landing.png';
+import AvatarCarousel from './avatar';
+import todo from './assets/todo.svg';
 import ColorSelector from './ColorSelector';
 import Music from './music'
 import Timerbreak from './Timerbreak';
 import Timer from './Timersession';
 import './App.css';
+import Todolist from './todo';
+import HomeTimer from './HomeTimer'
 
 
 
@@ -48,11 +51,6 @@ function App() {
     setIsMusicVisible(false);
   };
 
-  
-  // function sayHello () {
-  //   console.log('hello') ss
-  // }
-
   //return HTML
   return (
     <div className="container">
@@ -69,16 +67,27 @@ function App() {
           <img src={music} className="btn" alt="music" />
         </div>
       </div>
-
       {timerStarted ? (
         isBreak ? <Timerbreak /> : <Timer />
       ) : (
 
-      <div className='session-start'>
-
-        
-        <img src={landing} className="home-img" alt="start session image" />
-        <div className='start-btn'>
+      <div className='study-session'>
+        <div className='study-options'>
+          <div className='timer-container'>
+            <HomeTimer />
+          </div>
+          <div className='avatar-container'>
+            <AvatarCarousel />
+          </div>
+          <div className='todo-container'>
+            <p className='todo-text'>To-do</p>
+              
+            <img src={todo} className="todo-img" alt="todo image"/> 
+            <Todolist />
+          </div>
+          
+        </div>
+       <div className='start-btn'>
             
           <p onClick={handleBeginSession}>Begin new study session</p>
             {/*<button onClick={handleBeginBreak}>Take a break</button> */}

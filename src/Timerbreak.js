@@ -92,14 +92,10 @@ const Timerbreak = () => {
 	};
 
 	return (
-		<div
-			style={{ textAlign: "center", margin: "auto" }}>
-			<h1 style={{ color: "green" }}>
-				GeeksforGeeks
-			</h1>
-			<h3>Countdown Timer Using React JS</h3>
+		<div>
+			
 			<h2>{timer}</h2>
-			<button onClick={onClickReset}>Reset</button>
+			{/* <button onClick={onClickReset}>Reset</button> */}
 		</div>
 	);
 };
