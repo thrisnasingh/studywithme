@@ -53,10 +53,11 @@ function App() {
 
   const handleHomeButtonClick = () => {
     // Reset the state when the home button is clicked
-    setSelectedColor('#007bff');
-    setTimerStarted(false);
-    setIsBreak(false);
-    setIsMusicVisible(false);
+    // setSelectedColor('#007bff');
+    // setTimerStarted(false);
+    // setIsBreak(false);
+    // setIsMusicVisible(false);
+    window.location.reload();
   };
 
 
