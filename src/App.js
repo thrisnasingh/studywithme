@@ -17,6 +17,8 @@ import ToiletBreakContainer from './containers/ToiletBreakContainer';
 import './App.css';
 import Todolist from './todo';
 import HomeTimer from './HomeTimer'
+import Draggable from 'react-draggable';
+import StickiesContainer from './StickiesContainer';
 
 
 
@@ -75,6 +77,7 @@ function App() {
           <img src={music} className="btn" alt="music" onClick={handleMusicClick} ref={musicButtonRef}/>
           {isMusicVisible && <Music buttonRef={musicButtonRef}/>}
           <img src={stickies} className="btn" alt="stickies" />
+          
           <img src={help} className="btn" alt="help" />
         </div>
         <div className='time-bar'> <p>this is a time bar</p></div>
@@ -82,6 +85,12 @@ function App() {
           <img src={todoicon} className="todo-btn" alt="todo icon" />
         </div>
       </div>
+
+    <div className="stickyTitle">
+      {/* <h1>Draggable Stickies</h1> */}
+      <StickiesContainer />
+    </div>
+
 <HomeContainer />
     
   </div>
