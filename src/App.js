@@ -5,7 +5,8 @@ import music from './assets/music.png';
 import stickies from './assets/stickies.png';
 import color from './assets/color.png';
 import landing from './assets/landing.png';
-import ColorSelector from './ColorSelector'
+import ColorSelector from './ColorSelector';
+import Music from './music'
 import Timerbreak from './Timerbreak';
 import Timer from './Timersession';
 import './App.css';
@@ -13,9 +14,13 @@ import './App.css';
 
 
 function App() {
+  // Declare variables
   const [selectedColor, setSelectedColor] = useState('#007bff');
   const colorButtonRef = useRef(null);
+  const musicButtonRef = useRef(null);
+  const [isMusicVisible, setIsMusicVisible] = useState(false);
 
+  //Write any functions
   const handleColorChange = (color) => {
     setSelectedColor(color);
     document.body.style.backgroundColor = color; // Change background color
@@ -34,10 +39,16 @@ function App() {
     setIsBreak(true);
   };
 
-  // Declare variables
+  
+  const handleMusicClick = () => {
+    setIsMusicVisible(!isMusicVisible);
+  };
 
+  const closeMusic = () => {
+    setIsMusicVisible(false);
+  };
 
-  //Write any functions
+  
   // function sayHello () {
   //   console.log('hello') ss
   // }
@@ -48,7 +59,8 @@ function App() {
       <div className="nav">
         <div className= "buttons">
           <ColorSelector buttonRef={colorButtonRef} onColorChange={handleColorChange} colorImage={color}/>
-          <img src={music} className="btn" alt="music" />
+          <img src={music} className="btn" alt="music" onClick={handleMusicClick} ref={musicButtonRef}/>
+          {isMusicVisible && <Music buttonRef={musicButtonRef} closeMusic={closeMusic} />}
           <img src={stickies} className="btn" alt="stickies" />
           <img src={help} className="btn" alt="help" />
         </div>
