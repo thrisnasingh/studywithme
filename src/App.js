@@ -63,6 +63,12 @@ function App() {
   };
 
 
+  const [isStickyVisible, setIsStickyVisible] = useState(false);
+  
+  const handleShowSticky = () => {
+    setIsStickyVisible(!isStickyVisible);
+  };
+
   // const closeMusic = () => {
   //   setIsMusicVisible(false);
   // };
@@ -76,8 +82,8 @@ function App() {
           <ColorSelector buttonRef={colorButtonRef} onColorChange={handleColorChange} colorImage={color}/>
           <img src={music} className="btn" alt="music" onClick={handleMusicClick} ref={musicButtonRef}/>
           {isMusicVisible && <Music buttonRef={musicButtonRef}/>}
-          <img src={stickies} className="btn" alt="stickies" />
-          
+          <img src={stickies} className="btn" alt="stickies" onClick={handleShowSticky}/>
+          {isStickyVisible && <StickiesContainer/>}
           <img src={help} className="btn" alt="help" />
         </div>
         <div className='time-bar'> <p>this is a time bar</p></div>
@@ -86,10 +92,9 @@ function App() {
         </div>
       </div>
 
-    <div className="stickyTitle">
-      {/* <h1>Draggable Stickies</h1> */}
+    {/* <div className="stickyTitle">
       <StickiesContainer />
-    </div>
+    </div> */}
 
 <HomeContainer />
     

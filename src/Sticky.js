@@ -7,6 +7,12 @@ const Sticky = ({ id }) => {
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [text, setText] = useState('');
 
+//   const Sticky = ({ id, initialPosition }) => {
+//     const [text, setText] = useState('');
+//     // const textareaRef = useRef(null);
+
+  
+
   useEffect(() => {
     const savedPosition = JSON.parse(localStorage.getItem(`stickyPosition_${id}`));
     if (savedPosition) {
@@ -31,14 +37,26 @@ const Sticky = ({ id }) => {
     localStorage.setItem(`stickyText_${id}`, newText);
   };
 
+//   const [isStickyVisible, setIsStickyVisible] = useState(false);
+//   const handleClose = () => {
+//     // close the sticky 
+//     setText('');
+//     setIsStickyVisible(false);
+//   };
+
+//   const handleShowSticky = () => {
+//     setIsStickyVisible(!isStickyVisible);
+//   };
+
   return (
     <Draggable defaultPosition={position} onStop={handleDrag}>
       <div className="sticky">
+        {/* <button className="close-btn" onClick={handleClose}>Close</button> */}
         <textarea
           className="sticky-input"
           value={text}
           onChange={handleTextChange}
-          placeholder="Type something..."
+          placeholder="Draggable Sticky! Type here"
         />
       </div>
     </Draggable>

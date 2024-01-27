@@ -236,14 +236,3 @@ body{
   }
 }
 
-
-.box {
-  position: absolute;
-  cursor: move;
-  color: rgb(248, 255, 115);
-  max-width: 215px;
-  border-radius: 5px;
-  padding: 1em;
-  margin: auto;
-  user-select: none;
-}
