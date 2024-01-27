@@ -5,13 +5,7 @@ import './Sticky.css';
 
 const Sticky = ({ id }) => {
   const [position, setPosition] = useState({ x: 0, y: 0 });
-  const [text, setText] = useState('');
-
-//   const Sticky = ({ id, initialPosition }) => {
-//     const [text, setText] = useState('');
-//     // const textareaRef = useRef(null);
-
-  
+  const [text, setText] = useState('');  
 
   useEffect(() => {
     const savedPosition = JSON.parse(localStorage.getItem(`stickyPosition_${id}`));
@@ -36,17 +30,6 @@ const Sticky = ({ id }) => {
     setText(newText);
     localStorage.setItem(`stickyText_${id}`, newText);
   };
-
-//   const [isStickyVisible, setIsStickyVisible] = useState(false);
-//   const handleClose = () => {
-//     // close the sticky 
-//     setText('');
-//     setIsStickyVisible(false);
-//   };
-
-//   const handleShowSticky = () => {
-//     setIsStickyVisible(!isStickyVisible);
-//   };
 
   return (
     <Draggable defaultPosition={position} onStop={handleDrag}>

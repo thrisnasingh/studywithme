@@ -1,14 +1,15 @@
 /* Sticky.css */
 .sticky {
-  background-color: #ffffcc;
+  background-color: rgb(255, 212, 85);
   padding: 10px;
   border-radius: 5px;
   border: 1px solid #cccccc;
   width: 180px; 
   height: 130px; 
   position: fixed;
-  top: 12%;
-  left: 10%;
+  top: 15%;
+  left: 20%;
+  z-index:1000;
 }
 
 .sticky-input {
