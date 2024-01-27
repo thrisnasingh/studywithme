@@ -1,0 +1,28 @@
+/* ColorSelector.css */
+.color-container {
+  position: relative;
+}
+
+.color-selector-btn {
+  width: 60px;
+  height: 60px;
+  padding: 5px;
+  margin-top: 15px;
+  transition: transform 0.2s;
+  cursor: pointer;
+}
+
+.color-selector-btn:hover {
+  transform: scale(1.1);
+  filter: drop-shadow(-3px 5px);
+  border-radius: 50%;
+}
+
+input[type="color"] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+

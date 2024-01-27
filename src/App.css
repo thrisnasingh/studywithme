@@ -4,9 +4,14 @@
   box-sizing: border-box;
   
 }
+
+body{
+  background-color: #a0cbe6;
+}
+
 .container{
   font-family: 'Single Day', 'Times';
-  background-color: #a0cbe6;
+  /* background-color: #a0cbe6; */
   /* max-width: 1100px; */
   /* border: 1px solid b ack; */
   padding: 0 40px;
