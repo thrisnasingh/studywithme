@@ -30,27 +30,33 @@ function App() {
   return (
     <div className="container">
       <div className="nav">
-      <ColorSelector buttonRef={colorButtonRef} onColorChange={handleColorChange} colorImage={color}/>
-        <img src={music} className="btn" alt="music" />
-        <img src={stickies} className="btn" alt="stickies" />
-        <img src={help} className="btn" alt="help" />
+        <div className= "buttons">
+          <ColorSelector buttonRef={colorButtonRef} onColorChange={handleColorChange} colorImage={color}/>
+          <img src={music} className="btn" alt="music" />
+          <img src={stickies} className="btn" alt="stickies" />
+          <img src={help} className="btn" alt="help" />
+        </div>
+        <div className='time-bar'> <p>this is a time bar</p></div>
+        <div className='todo-icon'>
+          <img src={music} className="btn" alt="music" />
+        </div>
       </div>
       
 
-        <div className='session-start'>
-          
-          <img src={landing} className="home-img" alt="help" />
-          <div className='start-btn'>
-            <p>Begin new study session</p>
-         
-            </div>
+      <div className='session-start'>
 
+        
+        <img src={landing} className="home-img" alt="start session image" />
+        <div className='start-btn'>
+          <p>Begin new study session</p>
         </div>
 
+      </div>
 
+{/* 
         <div className='set-time'>
         
-        </div>
+        </div> */}
     
   </div>
       

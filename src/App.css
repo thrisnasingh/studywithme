@@ -2,27 +2,45 @@
 
 *{
   box-sizing: border-box;
-  
+  margin:0;
+  padding:0;
 }
 
 body{
   background-color: #a0cbe6;
-}
-
-.container{
   font-family: 'Single Day', 'Times';
-  /* background-color: #a0cbe6; */
+  background-color: #a0cbe6;
   /* max-width: 1100px; */
   /* border: 1px solid b ack; */
   padding: 0 40px;
   font-size: 62.5%;
 }
 
+.container{
+  max-width: 1400px;
+  height:100%;
+  margin: 0 auto;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+
 .nav{
-  
-  height: 100px;
   display: flex;
+  flex: 1;
   flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+}
+
+.buttons{
+  display:flex;
+  margin-left: 40px;
+  top:30px;
+  left:100px;
 }
 
 .btn{
@@ -30,51 +48,75 @@ body{
   padding: 5px 8px;
   margin-top:15px;
   transition: transform 0.2s;
-
-  /* background-color: white; */
-  /* border: 2px solid black; */
-  /* border-radius: 50%; */
 }
 
 .btn:hover{
-  transform:scale(1.1);
+  transform:scale(1.15);
   filter:drop-shadow( -3px 5px);
   border-radius:50%;
-  /* height:70px; */
+}
+
+.time-bar{
+  display:none;
+  width:400px;
+  font-size: 20px;
+  background-color: #fffbf3;
+  padding: 5px 0;
+  text-align: center;
+  border-radius: 30px;
+}
+
+.todo-icon{
+  margin-right: 40px;
   
 }
 
 .session-start{
-  
   display:flex;
+  /* border: 3px solid red; */
   flex-direction: column;
   justify-content: center;
   /* align-items:/ center; */
-  margin:auto;
-  height: 80vh;
-}
-
-.home-img{
+  margin: auto;
+  margin-top: 100px;
+  /* margin: 50px 50px; */
+  /* height: 100%; */
   position:relative;
 }
 
+.home-img{
+
+  width:80%;
+  margin:auto;
+  /* width:auto;
+  height: 400px; */
+  /* max-width:800px; */
+}
+
 .start-btn{
-  text-align: center;
+  position:absolute;
+  margin:auto;
+  left:0;
+  right:0;
+  bottom:-60px;
   font-weight: bold;
   font-size: 2rem;
-  line-height: 0%;
-  padding:0;
-
+  padding:10px;
   border-radius: 30px;
-  position:absolute;
-  margin: auto;
-  left: 25%;
-  /* hhhh */
-  top:80%;
+  text-align: center;
   background-color: #fffbf3;
-  width: 50vw;
+  width: 35vw;
 }
 
 .start-btn:hover{
   background-color: pink;
+}
+
+@media (max-width: 1000px){
+
+  .start-btn{
+    font-size: 25px;
+    bottom:-80px;
+    width: 44vw;
+  }
 }
