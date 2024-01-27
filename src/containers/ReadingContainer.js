@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import EndSessionContainer from './EndSessionContainer';
 import ToiletBreakContainer from './ToiletBreakContainer';
-import cattable from '../assets/cattable.png';
 import end from '../assets/end.svg';
 import toilet from '../assets/toilet.svg';
 import '../containers-css/ReadingContainer.css';
@@ -28,9 +27,7 @@ const ReadingContainer = ({ currentAvatarIndex }) => {
 
   // Define an array of image sources based on the avatar index
   const avatarImages = [
-    'path_to_img1',
-    'path_to_img2',
-    'path_to_img3',
+    catTable, frogTable, duckTable
     // Add more paths as needed
   ];
 
@@ -47,7 +44,7 @@ const ReadingContainer = ({ currentAvatarIndex }) => {
       )
     ) : (
       <div className="study-session-container">
-        <img src={cattable} className="cat-table"/>
+        <img src={avatarImages[currentAvatarIndex]} alt={`Avatar ${currentAvatarIndex + 1}`} className="avatar-image" />
         <div className="small-timer-container">
           <img src={end} onClick={handleEndSession} className="end-btn" />
           <Timer />

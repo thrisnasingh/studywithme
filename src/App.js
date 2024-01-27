@@ -4,7 +4,6 @@ import help from './assets/help.png';
 import music from './assets/music.png';
 import stickies from './assets/stickies.png';
 import color from './assets/color.png';
-import AvatarCarousel from './avatar';
 import todo from './assets/todo.svg';
 import ColorSelector from './ColorSelector';
 import Music from './music'

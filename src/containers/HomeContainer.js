@@ -1,15 +1,23 @@
 import React, { useState } from 'react';
-import Timer from '../Timersession';
 import ReadingContainer from './ReadingContainer';
 import HomeTimer from '../HomeTimer';
 import TodoList from '../todo';
-import AvatarCarousel from '../avatar';
 import todo from '../assets/todo.svg';
-import AvatarState from '../AvatarState';
+import homeCat from '../assets/home-cat.svg';
+import homeFrog from '../assets/home-frog.svg';
+import homeDuck from '../assets/home-duck.svg';
+import '../containers-css/HomeContainer.css';
 
 const HomeContainer = () => {
   const [timerStarted, setTimerStarted] = useState(false);
   const [isBreak, setIsBreak] = useState(false);
+  const avatars = [homeCat, homeFrog, homeDuck];
+  const [currentAvatarIndex, setCurrentAvatarIndex] = useState(0);
+
+  const handleAvatarClick = () => {
+    // Increment the index and cycle back to 0 if it exceeds the array length
+    setCurrentAvatarIndex((prevIndex) => (prevIndex + 1) % avatars.length);
+  }
 
   const handleBeginSession = () => {
     setTimerStarted(true);
@@ -26,7 +34,9 @@ const HomeContainer = () => {
     <>
       {timerStarted ? (
         <div>
-        <ReadingContainer />
+        <ReadingContainer
+          currentAvatarIndex={currentAvatarIndex}
+        />
         </div>
 
       ) : (
@@ -36,7 +46,11 @@ const HomeContainer = () => {
             <HomeTimer />
           </div>
           <div className='avatar-container'>
-            <AvatarCarousel />
+          <img
+            src={avatars[currentAvatarIndex]}
+            className="avatar-img"
+            onClick={handleAvatarClick}
+          />
           </div>
           <div className='todo-container'>
             <p className='todo-text'>To-do</p>
