@@ -3,32 +3,42 @@ import React, { useRef, useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import './music.css';
 
-const Music = ({ buttonRef, closeMusic }) => {
+const Music = ({ buttonRef }) => {
   const musicRef = useRef(null);
+  const [isMinimized, setIsMinimized] = useState(false);
 
   useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (musicRef.current && !musicRef.current.contains(event.target)) {
-        closeMusic();
+    const handleClick = (event) => {
+      if (buttonRef.current && buttonRef.current.contains(event.target)) {
+        // Clicked on the music button, toggle minimized state
+        setIsMinimized(!isMinimized);
+      } else if (musicRef.current && !musicRef.current.contains(event.target)) {
+        // Clicked outside the music, minimize
+        setIsMinimized(true);
       }
     };
 
-    document.addEventListener('mousedown', handleClickOutside);
+    document.addEventListener('mousedown', handleClick);
 
     return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener('mousedown', handleClick);
     };
-  }, [closeMusic]);
+  }, [buttonRef, isMinimized]);
+
+  const iframeStyle = {
+    borderRadius: '12px',
+    width: isMinimized ? '0px' : '100%',
+    height: isMinimized ? '0px' : '352px',
+    position: isMinimized ? 'absolute' : 'static',
+  };
 
   return (
     <div className="music-container" ref={musicRef}>
       <iframe
-        style={{ borderRadius: '12px' }}
+        style={iframeStyle}
         src="https://open.spotify.com/embed/playlist/1JLw7Y5YvlsA10XjaKHTxE?utm_source=generator"
-        width="100%"
-        height="352"
         frameBorder="0"
-        allowfullscreen="true"
+        allowFullScreen="true"
         allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
         loading="lazy"
       ></iframe>
@@ -38,8 +48,6 @@ const Music = ({ buttonRef, closeMusic }) => {
 
 Music.propTypes = {
   buttonRef: PropTypes.object.isRequired,
-  closeMusic: PropTypes.func.isRequired,
 };
 
 export default Music;
-

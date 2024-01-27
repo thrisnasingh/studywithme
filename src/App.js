@@ -44,12 +44,13 @@ function App() {
 
   
   const handleMusicClick = () => {
-    setIsMusicVisible(!isMusicVisible);
-  };
+    setIsMusicVisible(true);
+  };  
 
-  const closeMusic = () => {
-    setIsMusicVisible(false);
-  };
+
+  // const closeMusic = () => {
+  //   setIsMusicVisible(false);
+  // };
 
   //return HTML
   return (
@@ -58,7 +59,7 @@ function App() {
         <div className= "buttons">
           <ColorSelector buttonRef={colorButtonRef} onColorChange={handleColorChange} colorImage={color}/>
           <img src={music} className="btn" alt="music" onClick={handleMusicClick} ref={musicButtonRef}/>
-          {isMusicVisible && <Music buttonRef={musicButtonRef} closeMusic={closeMusic} />}
+          {isMusicVisible && <Music buttonRef={musicButtonRef}/>}
           <img src={stickies} className="btn" alt="stickies" />
           <img src={help} className="btn" alt="help" />
         </div>

@@ -1,5 +1,6 @@
 /* ColorSelector.css */
 .color-container {
+  
   position: relative;
 }
 
@@ -20,8 +21,8 @@
 
 input[type="color"] {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 75%;
+  left: 10%;
   opacity: 0;
   cursor: pointer;
 }
