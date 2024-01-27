@@ -42,8 +42,9 @@ body{
   margin-top:10px;
 }
 
+
 .btn{
-  height:60px;
+  height:70px;
   padding: 5px 8px;
   margin-top:15px;
   transition: transform 0.2s;
@@ -51,8 +52,21 @@ body{
 
 .btn:hover{
   transform:scale(1.15);
-  filter:drop-shadow( -3px 5px);
+  filter:drop-shadow( -3px 4px);
   border-radius:50%;
+  cursor: pointer;
+}
+
+.todo-btn{
+  height: 80px;
+  padding: 5px 6px;
+  transform: rotateZ(4deg);
+  margin-top:20px;
+  transition: transform 0.2s;
+}
+.todo-btn:hover{
+  transform:scale(1.15);
+  filter:drop-shadow( 3px 4px);
   cursor: pointer;
 }
 

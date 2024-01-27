@@ -1,8 +1,8 @@
 /* Music.css */
 .music-container {
     position: fixed;
-    top: 30%;
-    left: 21%;
+    top: 280px;
+    left: 280px;
     transform: translate(-50%, -50%);
     z-index: 1000; /* Set a high z-index to ensure it appears above other elements */
   }

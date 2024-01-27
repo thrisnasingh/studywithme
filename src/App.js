@@ -4,9 +4,11 @@ import help from './assets/help.png';
 import music from './assets/music.png';
 import stickies from './assets/stickies.png';
 import color from './assets/color.png';
+import homeicon from './assets/homeicon.png';
 import todo from './assets/todo.svg';
 import ColorSelector from './ColorSelector';
 import Music from './music'
+import todoicon from './assets/todo-icon.svg';
 import Timerbreak from './Timerbreak';
 import Timer from './Timersession';
 import HomeContainer from './containers/HomeContainer';
@@ -49,6 +51,14 @@ function App() {
     setIsMusicVisible(true);
   };  
 
+  const handleHomeButtonClick = () => {
+    // Reset the state when the home button is clicked
+    setSelectedColor('#007bff');
+    setTimerStarted(false);
+    setIsBreak(false);
+    setIsMusicVisible(false);
+  };
+
 
   // const closeMusic = () => {
   //   setIsMusicVisible(false);
@@ -59,6 +69,7 @@ function App() {
     <div className="container">
       <div className="nav">
         <div className= "buttons">
+          <img src={homeicon} className="btn" onClick={handleHomeButtonClick} alt="home-icon" />
           <ColorSelector buttonRef={colorButtonRef} onColorChange={handleColorChange} colorImage={color}/>
           <img src={music} className="btn" alt="music" onClick={handleMusicClick} ref={musicButtonRef}/>
           {isMusicVisible && <Music buttonRef={musicButtonRef}/>}
@@ -67,7 +78,7 @@ function App() {
         </div>
         <div className='time-bar'> <p>this is a time bar</p></div>
         <div className='todo-icon'>
-          <img src={music} className="btn" alt="music" />
+          <img src={todoicon} className="todo-btn" alt="todo icon" />
         </div>
       </div>
 <HomeContainer />

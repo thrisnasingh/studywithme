@@ -5,8 +5,8 @@
 }
 
 .color-selector-btn {
-  width: 60px;
-  height: 60px;
+  width: 70px;
+  height: 70px;
   padding: 5px;
   margin-top: 15px;
   transition: transform 0.2s;
@@ -15,14 +15,14 @@
 
 .color-selector-btn:hover {
   transform: scale(1.1);
-  filter: drop-shadow(-3px 5px);
+  filter: drop-shadow(-3px 4px);
   border-radius: 50%;
 }
 
 input[type="color"] {
   position: absolute;
-  top: 75%;
-  left: 10%;
+  top: 78%;
+  left: -100%;
   opacity: 0;
   cursor: pointer;
 }
