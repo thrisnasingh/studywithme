@@ -4,6 +4,7 @@ import help from './assets/help.png';
 import music from './assets/music.png';
 import stickies from './assets/stickies.png';
 import color from './assets/color.png';
+import Sticky from './Sticky'; 
 import homeicon from './assets/homeicon.png';
 import todo from './assets/todo.svg';
 import ColorSelector from './ColorSelector';
@@ -64,11 +65,35 @@ function App() {
     window.location.reload();
   };
 
-  const [isStickyVisible, setIsStickyVisible] = useState(false);
+  // const [isStickyVisible, setIsStickyVisible] = useState(false);
   
-  const handleShowSticky = () => {
-    setIsStickyVisible(!isStickyVisible);
+  // const handleShowSticky = () => {
+  //   setIsStickyVisible(!isStickyVisible);
+  // };
+
+  // Maintain a list of sticky note IDs
+  const [stickyNoteIds, setStickyNoteIds] = useState([]);
+
+  // Function to add a new sticky note ID to the list
+  const addStickyNote = () => {
+    const newId = Date.now(); // Use timestamp as a unique ID
+    setStickyNoteIds((prevIds) => [...prevIds, newId]);
   };
+
+  // Function to remove a sticky note ID from the list
+  const removeStickyNote = (id) => {
+    setStickyNoteIds((prevIds) => prevIds.filter((noteId) => noteId !== id));
+  };
+
+
+  // Render a new Sticky component for each sticky note ID
+  // const stickyComponents = stickyNoteIds.map((id) => (
+  //   <Sticky key={id} id={id} />
+  // ));
+
+  const stickyComponents = stickyNoteIds.map((id) => (
+    <Sticky key={id} id={id} onClose={() => removeStickyNote(id)} />
+  ));
 
   const [isHelperVisible, setIsHelperVisible] = useState(false);
 
@@ -92,8 +117,10 @@ function App() {
           <ColorSelector buttonRef={colorButtonRef} onColorChange={handleColorChange} colorImage={color}/>
           <img src={music} className="btn" alt="music" onClick={handleMusicClick} ref={musicButtonRef}/>
           {isMusicVisible && <Music buttonRef={musicButtonRef}/>}
-          <img src={stickies} className="btn" alt="stickies" onClick={handleShowSticky}/>
-          {isStickyVisible && <StickiesContainer/>}
+          {/* <img src={stickies} className="btn" alt="stickies" onClick={handleShowSticky}/>
+          {isStickyVisible && <StickiesContainer/>} */}
+          <img src={stickies} className="btn" alt="stickies" onClick={addStickyNote} />
+          {stickyComponents}
           <img src={help} className="btn" alt="help" onClick={toggleVisibility}/>
           {isHelperVisible && 
           <div className="pop-out-content">

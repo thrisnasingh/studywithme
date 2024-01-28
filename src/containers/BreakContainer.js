@@ -142,7 +142,8 @@ const BreakContainer = ({ currentAvatarIndex, initialTimerValue, breakTimeValue 
         </div>
       ) : (
         <div>
-          <EndSessionContainer/>
+          <EndSessionContainer
+          currentAvatarIndex={currentAvatarIndex}/>
         </div>
       )
     ) : (
