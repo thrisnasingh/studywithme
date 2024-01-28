@@ -43,7 +43,8 @@ const ToiletBreakContainer = ({ currentAvatarIndex }) => {
         </div>
       ) : (
         <div>
-          <EndSessionContainer/>
+          <EndSessionContainer
+          currentAvatarIndex={currentAvatarIndex}/>
         </div>
       )
     ) : (

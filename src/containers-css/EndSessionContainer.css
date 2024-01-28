@@ -1,0 +1,33 @@
+.end-session-screen{
+    /* border:2px solid red; */
+    height:80vh;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position:relative;
+    
+}
+
+.back-home-btn{
+    /* border:2px solid green; */
+    max-height: 65px;
+    /* height: 9vh; */
+    width:20vw;
+    margin-top: 1%;
+}
+
+.back-home-btn:hover{
+    transform: scale(1.05);
+    filter:drop-shadow( 0px 3px);
+    cursor: pointer;
+}
+
+.avatar-end-image{
+    /* border:2px solid green; */
+    
+    width:50vw;
+    max-width:700px;
+    /* margin-bottom:5%; */
+    
+}
