@@ -161,6 +161,11 @@ function App() {
             <img src= {color} className="instruction-btn" alt="colorwheel"/>
             <h3>Customize your background to your favorite color with the color wheel</h3>
             </div>
+
+            <div className="instruction-container">
+            <img src= {todoicon} className="instruction-btn todo-instr" alt="todoicon"/>
+            <h3>Record your plans for today's session here</h3>
+            </div>
           </div>
           }
         </div>

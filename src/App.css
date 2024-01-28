@@ -186,21 +186,6 @@ body{
   z-index:100;
 }
 
-.cat-img{
-  width:30vh;
-  margin: auto -32px;
-  
-  /* margin: auto 30px;; */
-}
-
-
-.left-arrow{
-  height:4vh;
-  position:absolute;
-  top:40%;
-  left:0%;
-
-}
 
 .todo-container{
   position:relative;
@@ -247,6 +232,10 @@ body{
   transition: transform 0.2s;
 }
 
+.todo-instr{
+  margin-left:8px;
+  margin-right:13px;
+}
 
 .pop-out-content{
   background-color: rgb(255, 255, 255);
