@@ -10,3 +10,10 @@
     transform:translateZ(10)
 }
 
+.study-options{
+    /* border:2px solid red; */
+    display:flex;
+    justify-content: center;
+    width:80vw;
+    
+}

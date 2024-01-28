@@ -1,51 +1,70 @@
-.study-session-container{
-    width:100%;
+.toilet-session-container{
+    /* width:100%; */
     /* height:100; */
+    height:80vh;
+    display:flex;
+    margin:auto;
+    margin-top: 4%;
     display:flex;
     flex-direction: column;
-    justify-content: space-around;
+    
     align-items: center;
-    position:relative;
+    /* position:relative; */
+    /* border: 2px solid red; */
 }
 
-.avatar-image{
-    margin-top:8%;
-    height:40vh;;
+.avatar-toilet{
+    /* border: 2px solid red; */
+    height:47vh;
     /* margin:auto; */
 }
 
-.small-timer-container{
+.toilet-options{
     display:flex;
-    max-width:400px;
-    position:relative;
+    /* border: 2px solid red; */
+    height:6vh;
+    width:25vw;
+    margin-top: 2%;
+    /* position:relative; */
     justify-content: center;
     align-items: center;
     
 }
 
-.end-btn{
-    margin-top:3%;
-    left: 46%;
-    position:absolute;
-    width:42%;
+.toilet-text{
+    font-size: 2.5rem;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.toilet-end-btn{
+    max-height: 65px;
+    height: 9vh;
+    margin-right: 10%;
     transition: transform 0.2s;
 }
 
-.end-btn:hover{
+.toilet-end-btn:hover{
     transform: translateY(-2px) translateX(-1px) rotateZ(-2deg);
     filter:drop-shadow( -5px 2px);
     cursor: pointer;
 }
-.toilet-btn{
-    right: 46%;
-    margin-top:3%;
-    position:absolute;
-    width:42%;
+.toilet-resume-btn{
+    max-height: 65px;
+    margin-left: 10%;
+    height: 9vh;
     transition: transform 0.2s;
 }
-.toilet-btn:hover{
+.toilet-resume-btn:hover{
     /* transform: scale(1.1); */
     transform: translateY(-2px) translateX(1px) rotateZ(2deg);
     filter:drop-shadow( 5px 2px);
     cursor: pointer;
 }
+
+@media (max-width: 1000px){
+
+    .toilet-text{
+        font-size: 350%;
+    }
+  }

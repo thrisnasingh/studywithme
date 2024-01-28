@@ -17,7 +17,6 @@ import ToiletBreakContainer from './containers/ToiletBreakContainer';
 import './App.css';
 import Todolist from './todo';
 import HomeTimer from './HomeTimer'
-import Draggable from 'react-draggable';
 import StickiesContainer from './StickiesContainer';
 
 
@@ -62,12 +61,12 @@ function App() {
     window.location.reload();
   };
 
-
   const [isStickyVisible, setIsStickyVisible] = useState(false);
   
   const handleShowSticky = () => {
     setIsStickyVisible(!isStickyVisible);
   };
+
 
   // const closeMusic = () => {
   //   setIsMusicVisible(false);
@@ -91,11 +90,6 @@ function App() {
           <img src={todoicon} className="todo-btn" alt="todo icon" />
         </div>
       </div>
-
-    {/* <div className="stickyTitle">
-      <StickiesContainer />
-    </div> */}
-
 <HomeContainer />
     
   </div>

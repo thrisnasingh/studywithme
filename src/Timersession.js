@@ -10,11 +10,11 @@ import toilet from './assets/toilet.svg';
 import './Timersession.css';
 import readingpageImage from './assets/readingpage.png'; // Adjust the file path
 
-const Timer = ({initialTimerValue}) => {
+const Timer = ({ paused }) => {
 	
 	const Ref = useRef(null);
 	const [timer, setTimer] = useState("00:00:00");
-	const [totalMinutes, setTotalMinutes] = useState(initialTimerValue);
+	const [totalMinutes, setTotalMinutes] = useState(40);
   
 	const getTimeRemaining = (e) => {
 	  const total = Date.parse(e) - Date.parse(new Date());
@@ -92,7 +92,7 @@ const Timer = ({initialTimerValue}) => {
 	  return () => {
 		if (Ref.current) clearInterval(Ref.current);
 	  };
-	}, [totalMinutes]);
+	}, [totalMinutes, paused]);
 	const onClickReset = () => {
 		clearTimer(getDeadTime());
 	};

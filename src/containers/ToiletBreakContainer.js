@@ -3,10 +3,12 @@ import EndSessionContainer from './EndSessionContainer';
 import ReadingContainer from './ReadingContainer';
 import music from '../assets/music.png';
 import help from '../assets/help.png';
+import end from '../assets/end.svg';
+import resume from '../assets/resume.svg';
 import '../containers-css/ToiletBreakContainer.css';
-import frogTable from '../assets/frogtable.png';
-import catTable from '../assets/cattable.png';
-import duckTable from '../assets/ducktable.png';
+import frogtoilet from '../assets/frogtoilet.png';
+import cattoilet from '../assets/cattoilet.png';
+import ducktoilet from '../assets/ducktoilet.png';
 import Timer from '../Timersession';
 
 
@@ -27,7 +29,7 @@ const ToiletBreakContainer = ({ currentAvatarIndex }) => {
 
   // Define an array of image sources based on the avatar index
   const avatarImages = [
-    catTable, frogTable, duckTable
+    cattoilet, frogtoilet, ducktoilet
     // Add more paths as needed
   ];
 
@@ -45,12 +47,12 @@ const ToiletBreakContainer = ({ currentAvatarIndex }) => {
         </div>
       )
     ) : (
-      <div className="study-session-container">
-        <img src={avatarImages[currentAvatarIndex]} alt={`Avatar ${currentAvatarIndex + 1}`} className="avatar-image" />
-        <div className="small-timer-container">
-          <img src={music} onClick={handleEndSession} className="end-btn" />
-          <Timer />
-          <img src={help} onClick={handleisResume} className="toilet-btn" />
+      <div className="toilet-session-container">
+        <img src={avatarImages[currentAvatarIndex]} alt={`Avatar ${currentAvatarIndex + 1}`} className="avatar-toilet" />
+        <div className='toilet-options'>
+          <img src={end} onClick={handleEndSession} className='toilet-end-btn'/>
+          <p className='toilet-text'>Toilet Break</p>
+          <img src={resume} onClick={handleisResume}  className='toilet-resume-btn'/>
         </div>
       </div>
     )

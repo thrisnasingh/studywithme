@@ -52,4 +52,3 @@ const Sticky = ({ id }) => {
 };
 
 export default Sticky;
-
