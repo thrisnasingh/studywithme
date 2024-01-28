@@ -1,7 +1,7 @@
 .study-break-container{
     
     height:80vh;
-    border: 2px solid red;
+    /* border: 2px solid red; */
     display:flex;
     flex-direction: column;
     align-items: center;
@@ -9,31 +9,73 @@
 }
 
 .avatar-break-image{
-    border: 2px solid green;
+    /* border: 2px solid green; */
     width:50vw;
     max-width: 550px;
 }
 
 .small-timer-break-container{
     display:flex;
-    border: 2px solid green;
+    /* border: 2px solid green; */
     width:100%;
-    /* max-width:400px; */
+    max-width:400px;
     position:relative;
     justify-content: center;
     align-items: center;
 }
 
-/* .small-timer{
-    width:30vw;
-} */
+.break-timer{
+    /* border: 2px solid blue; */
+    margin-top:3%;
+    width:42vw;
+}
+
+.actual-break-timer{
+    position:absolute;
+    top:20%;
+    text-align: center;
+    font-size: min(50px, 5.3vw);
+    border-radius: 5rem;
+    padding: 2px 10px;
+}
+
+.break-timer-btn{
+    margin-top:3%;
+    height: 60%;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    transition: transform 0.2s;
+}
+
+.break-minus-btn{
+    margin-left: 6%;
+}
+
+.break-minus-btn:hover{
+    transform: scale(1.1);
+    filter:drop-shadow( -3px 1px);
+    cursor: pointer;
+}
+
+.break-plus-btn{
+    margin-right: 6%;
+}
+.break-plus-btn:hover{
+    transform: scale(1.1);
+    filter:drop-shadow( 3px 1px);
+    cursor: pointer;
+}
+
 
 
 
 .end-break-btn{
     margin-top:3%;
     left: -46%;
-    /* position:absolute; */
+    position:absolute;
     width:42%;
     transition: transform 0.2s;
 }
