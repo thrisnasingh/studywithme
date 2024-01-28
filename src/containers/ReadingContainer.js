@@ -11,6 +11,7 @@ import frogTable from '../assets/frogtable.png';
 import catTable from '../assets/cattable.png';
 import duckTable from '../assets/ducktable.png';
 import BreakContainer from './BreakContainer';
+import Music from "../music";
 import '../Timersession.css';
 
 
@@ -26,12 +27,14 @@ const ReadingContainer = ({ currentAvatarIndex, initialTimerValue}) => { // take
    const [totalMinutes, setTotalMinutes] = useState(initialTimerValue / 60); //converts seconds to minutes
    const avatarImages = [catTable, frogTable, duckTable];
    const [currentTimerValue, setCurrentTimerValue] = useState(0);
+   const [spotifyEmbedKey, setSpotifyEmbedKey] = useState(null);
  
    // Transition Functions
    const handleEndSession = () => {
 	 setButtonClick(true);
 	 setIsEndSession(true);
-   sessionStorage.clear();
+  //  sessionStorage.clear();
+  //  setSpotifyEmbedKey(Date.now());
    };
  
    const parseTimeToSeconds = (timeString) => {

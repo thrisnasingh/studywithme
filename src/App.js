@@ -32,6 +32,7 @@ function App() {
   const colorButtonRef = useRef(null);
   const musicButtonRef = useRef(null);
   const [isMusicVisible, setIsMusicVisible] = useState(false);
+  const [spotifyEmbedKey, setSpotifyEmbedKey] = useState(Date.now());
 
   //Write any functions
   const handleColorChange = (color) => {
@@ -65,6 +66,7 @@ function App() {
     // setIsMusicVisible(false);
     window.location.reload();
     sessionStorage.clear();
+    setSpotifyEmbedKey(Date.now()); // Reload Spotify embed
   };
 
   // const [isStickyVisible, setIsStickyVisible] = useState(false);

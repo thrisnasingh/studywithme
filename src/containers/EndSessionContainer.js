@@ -9,9 +9,14 @@ import backhome from '../assets/backhome.svg'
 
 const EndSessionContainer = ({ currentAvatarIndex }) => {
   const [buttonClick, setButtonClick] = useState(false);
+  const [spotifyEmbedKey, setSpotifyEmbedKey] = useState(Date.now());
 
   const handleBackHomeSession = () => {
     setButtonClick(true);
+    window.location.reload();
+    sessionStorage.clear();
+    setSpotifyEmbedKey(Date.now());
+    
   };
 
   // Define an array of image sources based on the avatar index

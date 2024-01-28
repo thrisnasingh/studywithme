@@ -22,11 +22,13 @@ const BreakContainer = ({ currentAvatarIndex, initialTimerValue, breakTimeValue 
   const [timer, setTimer] = useState("00:00:00");
   const [totalMinutes, setTotalMinutes] = useState(breakTimeValue);
   const [breakOver, setBreakOver] = useState(false);
+  const [spotifyEmbedKey, setSpotifyEmbedKey] = useState(null);
 
   const handleEndSession = () => {
     setButtonClick(true);
     setIsEndSession(true);
-	sessionStorage.clear();
+	// sessionStorage.clear();
+	// setSpotifyEmbedKey(Date.now());
   };
 
   const handleisResume = () => {

@@ -13,11 +13,13 @@ const ToiletBreakContainer = ({ currentAvatarIndex, currentTimerValue }) => {
   const [buttonClick, setButtonClick] = useState(false);
   const [isResume, setIsResume] = useState(false);
   const [isEndSession, setIsEndSession] = useState(false);
+  const [spotifyEmbedKey, setSpotifyEmbedKey] = useState(null);
 
   const handleEndSession = () => {
     setButtonClick(true);
     setIsEndSession(true);
-    sessionStorage.clear();
+    // sessionStorage.clear();
+    // setSpotifyEmbedKey(Date.now());
   };
 
   const handleisResume = () => {
