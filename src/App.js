@@ -105,9 +105,9 @@ function App() {
             <li className="paragraph">color palette button: change the background color</li>
             <li className="paragraph">music button: play backgroun music of your choice</li>
             <li className="paragraph">sticky button: write some notes or remainders</li>
-            <li className="paragraph"></li>
-            <li className="paragraph"></li>
-            <li className="paragraph"></li>
+            <li className="paragraph">timer on the left: default 40min. You may increase or decrease study time</li>
+            <li className="paragraph">to-do list on the right: You may type in your goals for each session</li>
+            <li className="paragraph">click on the character in the middle to pick study buddy of your choice</li>
           
           </div>
           }
