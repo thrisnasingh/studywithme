@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState, u } from 'react';
 import logo from './logo.svg';
 import help from './assets/help.png';
 import music from './assets/music.png';
@@ -108,6 +108,9 @@ function App() {
     setIsToDoVisible(!isToDoVisible);
   };
 
+  const closePopup = () => {
+    setIsHelperVisible(false);
+  };
 
 
 
@@ -130,10 +133,12 @@ function App() {
           {stickyComponents}
           <img src={help} className="btn" alt="help" onClick={toggleVisibility}/>
           {isHelperVisible && 
-          <div className="pop-out-content">
+         
+         <div className="pop-out-content">
+          <button className="close-button" onClick={closePopup}>x</button>
             {/* Pop-out content goes here */}
             <h1>Instructions</h1>
-            <h2>These are the instructions on how to use the webpage...</h2>
+            <h2>how to navigate the webpage...</h2>
             <div className="instruction-container">
             <img src={homeicon} className="instruction-btn" alt="home-icon" />
             <h3>The Home button takes you back to the landing page </h3>
@@ -141,22 +146,21 @@ function App() {
 
             <div className="instruction-container">
             <img src={music} className="instruction-btn" alt="music" />
-            <h3>Music allows you to stream your favorite playlist while you study </h3>
+            <h3>Want some music? Enjoy a soothing lo-fi playlist designed for focused study sessions </h3>
             </div>
 
             <div className="instruction-container">
             <img src={stickies} className="instruction-btn" alt="stickies"/>
-            <h3>Have any important notes? The sticky notes allows you writed them down </h3>
+            <h3>Jot down quick thoughts with the sticky notes!</h3>
             </div>
 
             <div className="instruction-container">
             <img src= {color} className="instruction-btn" alt="colorwheel"/>
-            <h3>Colorwheel allows you to change to your preferred background</h3>
+            <h3>Customize your background to your favorite color with the color wheel</h3>
             </div>
           </div>
           }
         </div>
-        <div className='time-bar'> <p>this is a time bar</p></div>
         <div className='todo-icon'>
           <img src={todoicon} className="todo-btn" alt="todo icon" onClick={toggleToDoVisibility}/>
           {isToDoVisible && 

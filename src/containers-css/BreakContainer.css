@@ -9,22 +9,31 @@
 }
 
 .avatar-break-image{
+    border: 2px solid green;
     width:50vw;
     max-width: 550px;
 }
 
 .small-timer-break-container{
     display:flex;
-    max-width:400px;
+    border: 2px solid green;
+    width:100%;
+    /* max-width:400px; */
     position:relative;
     justify-content: center;
     align-items: center;
 }
 
+/* .small-timer{
+    width:30vw;
+} */
+
+
+
 .end-break-btn{
     margin-top:3%;
     left: -46%;
-    position:absolute;
+    /* position:absolute; */
     width:42%;
     transition: transform 0.2s;
 }
