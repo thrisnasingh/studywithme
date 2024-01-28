@@ -43,7 +43,7 @@ const Sticky = ({ id }) => {
           className="sticky-input"
           value={text}
           onChange={handleTextChange}
-          placeholder="Draggable Sticky! Type here"
+          placeholder="Draggable Sticky! Click on the icon again to close."
         />
         <button className="close-btn" onClick={handleClose}>Clear</button>
       </div>
