@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import '../containers-css/EndSessionContainer.css';
 import catEnd from '../assets/catend.png'
 import frogEnd from '../assets/frogend.png'
-import duckEnd from '../assets/catend.png'
+import duckEnd from '../assets/duckend.png'
 import HomeContainer from './HomeContainer';
 import backhome from '../assets/backhome.svg'
 
