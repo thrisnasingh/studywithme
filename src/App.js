@@ -10,6 +10,7 @@ import todo from './assets/todo.svg';
 import ColorSelector from './ColorSelector';
 import Music from './music'
 import todoicon from './assets/todo-icon.svg';
+import todopopup from './assets/todo-popup.svg';
 import Timerbreak from './Timerbreak';
 import Timer from './Timersession';
 import HomeContainer from './containers/HomeContainer';
@@ -168,9 +169,11 @@ function App() {
           {isToDoVisible && 
           <div className="to-do-popup">
             {/* Pop-out content goes here */}
-            <img src={todo} className="todo-popup-img" alt="todo image"/> 
+            <p className='session-plan-text'>Today's Plan</p>
+            <img src={todopopup} className="todo-popup-img" alt="todo image"/> 
             <div className="to-do-text-box">
-            <TodoList />
+              <button className="todo-close-button" onClick={toggleToDoVisibility}>x</button>
+              <TodoList/>
             </div>
           </div>
 }
