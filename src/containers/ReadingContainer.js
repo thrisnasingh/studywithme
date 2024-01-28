@@ -41,7 +41,8 @@ const ReadingContainer = ({ currentAvatarIndex }) => {
         </div>
       ) : (
         <div>
-          <EndSessionContainer/>
+          <EndSessionContainer
+          currentAvatarIndex={currentAvatarIndex}/>
         </div>
       )
     ) : (
