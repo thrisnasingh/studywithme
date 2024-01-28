@@ -1,0 +1,16 @@
+.todo-check-list {
+    max-width: 400px;
+    margin: 20px auto;
+  }
+  
+  .task-item {
+    display: flex;
+    align-items: center;
+    margin: 8px 0;
+  }
+  
+  .completed {
+    text-decoration: line-through;
+    color: #888;
+  }
+  
