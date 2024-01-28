@@ -26,6 +26,7 @@ const BreakContainer = ({ currentAvatarIndex, initialTimerValue, breakTimeValue 
   const handleEndSession = () => {
     setButtonClick(true);
     setIsEndSession(true);
+	sessionStorage.clear();
   };
 
   const handleisResume = () => {

@@ -257,6 +257,46 @@ body{
  
 }
 
+.to-do-popup{
+  /* opacity: 0.8; */
+  position: fixed;
+  border-radius: 30px;
+  font-size:1.3rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  z-index: 999; /* Set a high z-index to make it appear above other elements */
+  height: 75%;
+  width: 50%;
+}
+
+.to-do-text-box{
+  /* opacity: 0.8; */
+  position: fixed;
+  border-radius: 30px;
+  font-size:1.3rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  z-index: 999; /* Set a high z-index to make it appear above other elements */
+  height: 100%;
+  width: 55%;
+  /* background-color: red */
+}
+
+.todo-popup-img{
+  /* padding: 0 10px; */
+  height:125%;
+  margin:auto;
+  position: relative;
+  left: 15%;
+  top: -15%
+  /* height: 700px;  */
+  /* max-width:800px; */
+}
+
 @media (max-width: 1000px){
 
   .start-btn{

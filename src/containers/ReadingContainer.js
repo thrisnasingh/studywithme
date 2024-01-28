@@ -14,7 +14,7 @@ import BreakContainer from './BreakContainer';
 import '../Timersession.css';
 
 
-const ReadingContainer = ({ currentAvatarIndex, initialTimerValue}) => {
+const ReadingContainer = ({ currentAvatarIndex, initialTimerValue}) => { // takes in seconds
    // Constants
    const [buttonClick, setButtonClick] = useState(false);
    const [isToiletBreak, setIsToiletBreak] = useState(false);
@@ -23,7 +23,7 @@ const ReadingContainer = ({ currentAvatarIndex, initialTimerValue}) => {
    const [isPaused, setIsPaused] = useState(false);
    const Ref = useRef(null);
    const [timer, setTimer] = useState("00:00:00");
-   const [totalMinutes, setTotalMinutes] = useState(initialTimerValue / 60);
+   const [totalMinutes, setTotalMinutes] = useState(initialTimerValue / 60); //converts seconds to minutes
    const avatarImages = [catTable, frogTable, duckTable];
    const [currentTimerValue, setCurrentTimerValue] = useState(0);
  
@@ -31,6 +31,7 @@ const ReadingContainer = ({ currentAvatarIndex, initialTimerValue}) => {
    const handleEndSession = () => {
 	 setButtonClick(true);
 	 setIsEndSession(true);
+   sessionStorage.clear();
    };
  
    const parseTimeToSeconds = (timeString) => {
@@ -148,8 +149,8 @@ const ReadingContainer = ({ currentAvatarIndex, initialTimerValue}) => {
     isBreak ? (
       <BreakContainer
       currentAvatarIndex={currentAvatarIndex}
-	  initialTimerValue={initialTimerValue}
-	  breakTimeValue={10}
+	  initialTimerValue={initialTimerValue} //seconds
+	  breakTimeValue={10} //minutes
       />
     ) : (
     buttonClick ? (
@@ -157,7 +158,7 @@ const ReadingContainer = ({ currentAvatarIndex, initialTimerValue}) => {
         <div>
           <ToiletBreakContainer
           currentAvatarIndex={currentAvatarIndex}
-		  currentTimerValue={parseTimeToSeconds(timer)}
+		      currentTimerValue={parseTimeToSeconds(timer)}
           />
         </div>
       ) : (

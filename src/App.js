@@ -19,6 +19,7 @@ import './App.css';
 import Todolist from './todo';
 import HomeTimer from './HomeTimer'
 import StickiesContainer from './StickiesContainer';
+import TodoList from './todo';
 import './Helper.css'
 // import PopOutList from './PopOutList'; 
 // import HelperPage from './HelperPage';
@@ -63,6 +64,7 @@ function App() {
     // setIsBreak(false);
     // setIsMusicVisible(false);
     window.location.reload();
+    sessionStorage.clear();
   };
 
   // const [isStickyVisible, setIsStickyVisible] = useState(false);
@@ -96,9 +98,14 @@ function App() {
   ));
 
   const [isHelperVisible, setIsHelperVisible] = useState(false);
+  const [isToDoVisible, setIsToDoVisible] = useState(false);
 
   const toggleVisibility = () => {
     setIsHelperVisible(!isHelperVisible);
+  };
+
+  const toggleToDoVisibility = () => {
+    setIsToDoVisible(!isToDoVisible);
   };
 
 
@@ -151,8 +158,18 @@ function App() {
         </div>
         <div className='time-bar'> <p>this is a time bar</p></div>
         <div className='todo-icon'>
-          <img src={todoicon} className="todo-btn" alt="todo icon" />
+          <img src={todoicon} className="todo-btn" alt="todo icon" onClick={toggleToDoVisibility}/>
+          {isToDoVisible && 
+          <div className="to-do-popup">
+            {/* Pop-out content goes here */}
+            <img src={todo} className="todo-popup-img" alt="todo image"/> 
+            <div className="to-do-text-box">
+            <TodoList />
+            </div>
+          </div>
+}
         </div>
+          
         {/* <PopOutList/> */}
       </div>
       

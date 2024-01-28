@@ -1,0 +1,40 @@
+/* Add this to your existing styles or create a new CSS file */
+/* .todo-list-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    /* z-index: 999; Adjust the z-index to make sure it appears above other content */
+  /* } */ 
+
+  
+  
+  .todo-div {
+    border: 2px solid red;
+    position:relative;
+    height:100vh;
+    /* width: 70px;
+    height: 70px; */
+    padding: 5px;
+    display:flex;
+    justify-content: center;
+    margin-top: 15px;
+    transition: transform 0.2s;
+    cursor: pointer;
+  }
+
+  .todo-text{
+    width: 27%;
+    height:55%;
+    position:absolute;
+    left:35%;
+    top:30%;
+    border: 2px solid green;
+  }
+
+  .todo-img{
+    height:80vh;
+  }

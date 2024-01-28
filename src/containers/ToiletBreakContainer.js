@@ -17,6 +17,7 @@ const ToiletBreakContainer = ({ currentAvatarIndex, currentTimerValue }) => {
   const handleEndSession = () => {
     setButtonClick(true);
     setIsEndSession(true);
+    sessionStorage.clear();
   };
 
   const handleisResume = () => {

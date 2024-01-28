@@ -22,14 +22,14 @@ const HomeContainer = () => {
     return seconds / 60;
   };
   
-  const handleMinusClick = () => {
+  const handleMinusClick = () => { // handles in mins, which is why seconds need to be converted
     // Ensure timer value does not go below 0
     if (convertSecondsToMinutes(initialTimerValue) > 0) {
       setInitialTimerValue(prevValue => prevValue - 5*60);
     }
   };
 
-  const handlePlusClick = () => {
+  const handlePlusClick = () => { // handles in mins, which is why seconds need to be converted
     // Increment the timer value
     if (convertSecondsToMinutes(initialTimerValue) < 999) {
         setInitialTimerValue(prevValue => prevValue + 5*60);
@@ -58,7 +58,7 @@ const HomeContainer = () => {
         <div>
         <ReadingContainer
           currentAvatarIndex={currentAvatarIndex}
-          initialTimerValue={initialTimerValue}
+          initialTimerValue={initialTimerValue} //passes in seconds
         />
         </div>
 
