@@ -31,16 +31,21 @@ const Sticky = ({ id }) => {
     localStorage.setItem(`stickyText_${id}`, newText);
   };
 
+  const handleClose = () => {
+    setText('');
+    localStorage.removeItem(`stickyText_${id}`);
+  };
+
   return (
     <Draggable defaultPosition={position} onStop={handleDrag}>
       <div className="sticky">
-        {/* <button className="close-btn" onClick={handleClose}>Close</button> */}
         <textarea
           className="sticky-input"
           value={text}
           onChange={handleTextChange}
           placeholder="Draggable Sticky! Type here"
         />
+        <button className="close-btn" onClick={handleClose}>Clear</button>
       </div>
     </Draggable>
   );
