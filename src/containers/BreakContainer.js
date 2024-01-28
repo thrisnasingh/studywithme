@@ -150,15 +150,15 @@ const BreakContainer = ({ currentAvatarIndex, initialTimerValue, breakTimeValue 
       <div className="study-break-container">
         <img src={avatarImages[currentAvatarIndex]} alt={`Avatar ${currentAvatarIndex + 1}`} className="avatar-break-image" />
         <div className="small-timer-break-container">
-          <img src={end} onClick={handleEndSession} className="end-break-btn" />
-      {/* Timer Layout */}
-        <div className='small-timer-btn'>
-					<img src={smallminus} onClick={handleMinusClick} className="small-minus-btn" />
-					<img src={smallplus} onClick={handlePlusClick} className="small-plus-btn" />
-				</div>
-				<img src={smalltimer} className="small-timer"/>
-				<div className="actual-timer">{timer}</div>
-          <img src={resume} onClick={handleisResume} className="resume-from-break-btn" />
+        	<img src={end} onClick={handleEndSession} className="end-break-btn" />
+			{/* Timer Layout */}
+			<div className='break-timer-btn'>
+				<img src={smallminus} onClick={handleMinusClick} className="break-minus-btn" />
+				<img src={smallplus} onClick={handlePlusClick} className="break-plus-btn" />
+			</div>
+			<img src={smalltimer} className="break-timer"/>
+			<div className="actual-break-timer">{timer}</div>
+		<img src={resume} onClick={handleisResume} className="resume-from-break-btn" />
         </div>
       </div>
     )
