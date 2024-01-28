@@ -18,6 +18,9 @@ import './App.css';
 import Todolist from './todo';
 import HomeTimer from './HomeTimer'
 import StickiesContainer from './StickiesContainer';
+import './Helper.css'
+// import PopOutList from './PopOutList'; 
+// import HelperPage from './HelperPage';
 
 
 
@@ -95,8 +98,17 @@ function App() {
           {isHelperVisible && 
           <div className="pop-out-content">
             {/* Pop-out content goes here */}
-            <h1>Instructions</h1>
-            <h2>These are the instructions on how to use the webpage...</h2>
+            <h1 className="title">Study With Me Instructions</h1>
+            {/* <h2 className="subtitle">These are the instructions on how to use the webpage...</h2> */}
+            {/* <p className="paragraph"></p> */}
+            <li className="paragraph">home button: redirect to home page</li>
+            <li className="paragraph">color palette button: change the background color</li>
+            <li className="paragraph">music button: play backgroun music of your choice</li>
+            <li className="paragraph">sticky button: write some notes or remainders</li>
+            <li className="paragraph"></li>
+            <li className="paragraph"></li>
+            <li className="paragraph"></li>
+          
           </div>
           }
         </div>
@@ -104,7 +116,10 @@ function App() {
         <div className='todo-icon'>
           <img src={todoicon} className="todo-btn" alt="todo icon" />
         </div>
+        {/* <PopOutList/> */}
       </div>
+      
+
 <HomeContainer />
     
   </div>
