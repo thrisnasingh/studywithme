@@ -7,9 +7,9 @@ import ReadingContainer from './ReadingContainer';
 import end from '../assets/end.svg';
 import resume from '../assets/resume.svg';
 import '../containers-css/BreakContainer.css';
-import frogBreak from '../assets/frogbreak.png';
-import catBreak from '../assets/catbreak.png';
-import duckBreak from '../assets/duckbreak.png';
+import frogBreak from '../assets/frog-break.png';
+import catBreak from '../assets/cat-break.png';
+import duckBreak from '../assets/duck-break.png';
 import '../Timersession.css';
 
 
