@@ -84,7 +84,7 @@ const HomeContainer = () => {
           />
           </div>
           <div className='todo-container'>
-            <p className='todo-text'>To-do</p>
+            <p className='todo-text'>Today's Plan</p>
               
             <img src={todo} className="todo-img" alt="todo image"/> 
             <TodoList />
