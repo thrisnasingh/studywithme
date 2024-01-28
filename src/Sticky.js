@@ -41,9 +41,9 @@ const Sticky = ({ id }) => {
       <div className="sticky">
         <textarea
           className="sticky-input"
-          value={text}
+          value={text} spellCheck={false}
           onChange={handleTextChange}
-          placeholder="Draggable Sticky! Click on the icon again to close."
+          placeholder="Type something..."
         />
         <button className="close-btn" onClick={handleClose}>Clear</button>
       </div>
