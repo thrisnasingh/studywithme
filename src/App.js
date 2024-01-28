@@ -125,17 +125,27 @@ function App() {
           {isHelperVisible && 
           <div className="pop-out-content">
             {/* Pop-out content goes here */}
-            <h1 className="title">Study With Me Instructions</h1>
-            {/* <h2 className="subtitle">These are the instructions on how to use the webpage...</h2> */}
-            {/* <p className="paragraph"></p> */}
-            <li className="paragraph">home button: redirect to home page</li>
-            <li className="paragraph">color palette button: change the background color</li>
-            <li className="paragraph">music button: play backgroun music of your choice</li>
-            <li className="paragraph">sticky button: write some notes or remainders</li>
-            <li className="paragraph">timer on the left: default 40min. You may increase or decrease study time</li>
-            <li className="paragraph">to-do list on the right: You may type in your goals for each session</li>
-            <li className="paragraph">click on the character in the middle to pick study buddy of your choice</li>
-          
+            <h1>Instructions</h1>
+            <h2>These are the instructions on how to use the webpage...</h2>
+            <div className="instruction-container">
+            <img src={homeicon} className="instruction-btn" alt="home-icon" />
+            <h3>The Home button takes you back to the landing page </h3>
+            </div>
+
+            <div className="instruction-container">
+            <img src={music} className="instruction-btn" alt="music" />
+            <h3>Music allows you to stream your favorite playlist while you study </h3>
+            </div>
+
+            <div className="instruction-container">
+            <img src={stickies} className="instruction-btn" alt="stickies"/>
+            <h3>Have any important notes? The sticky notes allows you writed them down </h3>
+            </div>
+
+            <div className="instruction-container">
+            <img src= {color} className="instruction-btn" alt="colorwheel"/>
+            <h3>Colorwheel allows you to change to your preferred background</h3>
+            </div>
           </div>
           }
         </div>
