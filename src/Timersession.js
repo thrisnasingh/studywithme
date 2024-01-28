@@ -9,6 +9,7 @@ import end from './assets/end.svg';
 import toilet from './assets/toilet.svg';
 import './Timersession.css';
 import readingpageImage from './assets/readingpage.png'; // Adjust the file path
+import BreakContainer from './containers/BreakContainer';
 
 const Timer = ({ paused }) => {
 	
@@ -21,8 +22,10 @@ const Timer = ({ paused }) => {
 	  const seconds = Math.floor((total / 1000) % 60);
 	  const minutes = Math.floor((total / 1000 / 60) % 60);
 	  const hours = Math.floor((total / 1000 / 60 / 60) % 24);
+
 	  return { total, hours, minutes, seconds };
 	};
+
   
 	const clearTimer = (deadline) => {
 	  // Clear any existing interval
@@ -70,8 +73,8 @@ const Timer = ({ paused }) => {
 	};
   
 	const handlePlusClick = () => {
-	  setTotalMinutes((prevTotal) => {
-		const newTotal = prevTotal + 5;
+	  setTotalMinutes((prevValue) => {
+		const newTotal = prevValue + 5;
 		clearTimer(getDeadTime(newTotal)); // Update the deadline
 		return newTotal;
 	  });
@@ -98,25 +101,20 @@ const Timer = ({ paused }) => {
 	};
 
 	return (
+
 		<div className="study-session-container">
-	
 			<div className="small-timer-container">
-			
-				
-				
 				<div className='small-timer-btn'>
 					<img src={smallminus} onClick={handleMinusClick} className="small-minus-btn" />
 					<img src={smallplus} onClick={handlePlusClick} className="small-plus-btn" />
 				</div>
 				<img src={smalltimer} className="small-timer"/>
 				<div className="actual-timer">{timer}</div>
-			
-				
 			</div>
-			
 			{/* <button onClick={onClickReset}>Reset</button> */}
 		</div>
-	  );
+		)
+	  ;
 	  
 };
 

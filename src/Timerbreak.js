@@ -10,6 +10,7 @@ const Timerbreak = () => {
 
 	// The state for our timer
 	const [timer, setTimer] = useState("00:00:00");
+	const [totalMinutes, setTotalMinutes] = useState(10);
 
 	const getTimeRemaining = (e) => {
 		const total =

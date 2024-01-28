@@ -6,9 +6,10 @@
     justify-content: space-around;
     align-items: center;
     position:relative;
+    /* border: 2px red; */
 }
 
-.avatar-image{
+.avatar-desk-image{
     margin-top:8%;
     height:40vh;;
     /* margin:auto; */
@@ -24,7 +25,7 @@
     
 }
 
-.end-btn{
+.end-reading-btn{
     margin-top:3%;
     left: -46%;
     position:absolute;
@@ -32,19 +33,19 @@
     transition: transform 0.2s;
 }
 
-.end-btn:hover{
+.end-reading-btn:hover{
     transform: translateY(-2px) translateX(-1px) rotateZ(-2deg);
     filter:drop-shadow( -5px 2px);
     cursor: pointer;
 }
-.toilet-btn{
+.start-toilet-btn{
     right: -46%;
     margin-top:3%;
     position:absolute;
     width:42%;
     transition: transform 0.2s;
 }
-.toilet-btn:hover{
+.start-toilet-btn:hover{
     /* transform: scale(1.1); */
     transform: translateY(-2px) translateX(1px) rotateZ(2deg);
     filter:drop-shadow( 5px 2px);

@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import ReadingContainer from './ReadingContainer';
-import HomeTimer from '../HomeTimer';
+import '../HomeTimer.css';
+import bigTimer from '../assets/big-timer_1.svg';
+import bigminus from '../assets/big-minus.svg';
+import bigplus from '../assets/big-plus.svg';
 import TodoList from '../todo';
 import todo from '../assets/todo.svg';
 import homeCat from '../assets/home-cat.svg';
@@ -13,6 +16,25 @@ const HomeContainer = () => {
   const [isBreak, setIsBreak] = useState(false);
   const avatars = [homeCat, homeFrog, homeDuck];
   const [currentAvatarIndex, setCurrentAvatarIndex] = useState(0);
+  const [initialTimerValue, setInitialTimerValue] = useState(2400); //passes in seconds
+
+  const convertSecondsToMinutes = (seconds) => {
+    return seconds / 60;
+  };
+  
+  const handleMinusClick = () => {
+    // Ensure timer value does not go below 0
+    if (convertSecondsToMinutes(initialTimerValue) > 0) {
+      setInitialTimerValue(prevValue => prevValue - 5*60);
+    }
+  };
+
+  const handlePlusClick = () => {
+    // Increment the timer value
+    if (convertSecondsToMinutes(initialTimerValue) < 999) {
+        setInitialTimerValue(prevValue => prevValue + 5*60);
+    }
+  };
 
   const handleAvatarClick = () => {
     // Increment the index and cycle back to 0 if it exceeds the array length
@@ -36,6 +58,7 @@ const HomeContainer = () => {
         <div>
         <ReadingContainer
           currentAvatarIndex={currentAvatarIndex}
+          initialTimerValue={initialTimerValue}
         />
         </div>
 
@@ -43,7 +66,15 @@ const HomeContainer = () => {
         <div className='study-session'>
         <div className='study-options'>
           <div className='timer-container'>
-            <HomeTimer />
+          <div className='timer-container'>   
+        <img src={bigTimer} className="timer-img" alt="timer image" />
+        <div className='timer-btn'>
+            <img onClick={handleMinusClick} src={bigminus} className="minus-btn" />
+            <img onClick={handlePlusClick} src={bigplus} className="plus-btn" />
+        </div>
+        <span className="min-label">min</span>
+        <span className= 'timer-value' id="timer-value">{convertSecondsToMinutes(initialTimerValue)}</span>
+    </div>
           </div>
           <div className='avatar-container'>
           <img
