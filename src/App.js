@@ -67,6 +67,12 @@ function App() {
     setIsStickyVisible(!isStickyVisible);
   };
 
+  const [isHelperVisible, setIsHelperVisible] = useState(false);
+
+  const toggleVisibility = () => {
+    setIsHelperVisible(!isHelperVisible);
+  };
+
 
   // const closeMusic = () => {
   //   setIsMusicVisible(false);
@@ -83,7 +89,14 @@ function App() {
           {isMusicVisible && <Music buttonRef={musicButtonRef}/>}
           <img src={stickies} className="btn" alt="stickies" onClick={handleShowSticky}/>
           {isStickyVisible && <StickiesContainer/>}
-          <img src={help} className="btn" alt="help" />
+          <img src={help} className="btn" alt="help" onClick={toggleVisibility}/>
+          {isHelperVisible && 
+          <div className="pop-out-content">
+            {/* Pop-out content goes here */}
+            <h1>Instructions</h1>
+            <h2>These are the instructions on how to use the webpage...</h2>
+          </div>
+          }
         </div>
         <div className='time-bar'> <p>this is a time bar</p></div>
         <div className='todo-icon'>
