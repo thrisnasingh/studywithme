@@ -10,11 +10,11 @@ import toilet from './assets/toilet.svg';
 import './Timersession.css';
 import readingpageImage from './assets/readingpage.png'; // Adjust the file path
 
-const Timer = () => {
+const Timer = ({initialTimerValue}) => {
 	
 	const Ref = useRef(null);
 	const [timer, setTimer] = useState("00:00:00");
-	const [totalMinutes, setTotalMinutes] = useState(40);
+	const [totalMinutes, setTotalMinutes] = useState(initialTimerValue);
   
 	const getTimeRemaining = (e) => {
 	  const total = Date.parse(e) - Date.parse(new Date());

@@ -10,7 +10,7 @@ import catTable from '../assets/cattable.png';
 import duckTable from '../assets/ducktable.png';
 
 
-const ReadingContainer = ({ currentAvatarIndex }) => {
+const ReadingContainer = ({ currentAvatarIndex, initialTimerValue}) => {
   const [buttonClick, setButtonClick] = useState(false);
   const [isToiletBreak, setIsToiletBreak] = useState(false);
   const [isEndSession, setIsEndSession] = useState(false);
@@ -28,7 +28,6 @@ const ReadingContainer = ({ currentAvatarIndex }) => {
   // Define an array of image sources based on the avatar index
   const avatarImages = [
     catTable, frogTable, duckTable
-    // Add more paths as needed
   ];
 
   return (
@@ -49,7 +48,9 @@ const ReadingContainer = ({ currentAvatarIndex }) => {
         <img src={avatarImages[currentAvatarIndex]} alt={`Avatar ${currentAvatarIndex + 1}`} className="avatar-image" />
         <div className="small-timer-container">
           <img src={end} onClick={handleEndSession} className="end-btn" />
-          <Timer />
+          <Timer 
+          initialTimerValue={initialTimerValue}
+          />
           <img src={toilet} onClick={handleToiletBreak} className="toilet-btn" />
         </div>
       </div>
