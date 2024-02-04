@@ -16,7 +16,7 @@ const HomeContainer = () => {
   const [isBreak, setIsBreak] = useState(false);
   const avatars = [homeCat, homeFrog, homeDuck];
   const [currentAvatarIndex, setCurrentAvatarIndex] = useState(0);
-  const [initialTimerValue, setInitialTimerValue] = useState(2400); //passes in seconds
+  const [initialTimerValue, setInitialTimerValue] = useState(900*60); //passes in seconds
 
   const convertSecondsToMinutes = (seconds) => {
     return seconds / 60;
@@ -31,7 +31,7 @@ const HomeContainer = () => {
 
   const handlePlusClick = () => { // handles in mins, which is why seconds need to be converted
     // Increment the timer value
-    if (convertSecondsToMinutes(initialTimerValue) < 999) {
+    if (convertSecondsToMinutes(initialTimerValue) < 995) {
         setInitialTimerValue(prevValue => prevValue + 5*60);
     }
   };

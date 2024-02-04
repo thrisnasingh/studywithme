@@ -17,7 +17,7 @@ const HomeTimer = () => {
 
   const handlePlusClick = () => {
     // Increment the timer value
-    if (timerValue < 999) {
+    if (timerValue < 995) {
         setTimerValue(prevValue => prevValue + 5);
     }
   };

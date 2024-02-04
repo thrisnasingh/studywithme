@@ -15,15 +15,18 @@
     top: 72%;
 }
 
-#timer-value{
-    font-size:25vh;
-    width:50%;
-    rotate:-7deg;
+#timer-value {
+    font-size: 25vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    rotate: -7deg;
     font-family: 'VT323';
     letter-spacing: -2vh;
-    position:absolute;
+    position: absolute;
     text-align: center;
-    z-index:10;
-    left:27%;
+    z-index: 10;
+    left: 27.5%;
     top: 4%;
 }
