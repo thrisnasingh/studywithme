@@ -26,7 +26,7 @@
   },
   "resolutions": {
     "nth-check": "^2.0.1",
-    "svgo": "^2.0.0",
+    "svgo": "3.3.2",
     "postcss": "8.4.31"
   },
   "scripts": {
