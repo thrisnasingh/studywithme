@@ -16,7 +16,7 @@ const HomeContainer = () => {
   const [isBreak, setIsBreak] = useState(false);
   const avatars = [homeCat, homeFrog, homeDuck];
   const [currentAvatarIndex, setCurrentAvatarIndex] = useState(0);
-  const [initialTimerValue, setInitialTimerValue] = useState(900*60); //passes in seconds
+  const [initialTimerValue, setInitialTimerValue] = useState(15*60); //passes in seconds
 
   const convertSecondsToMinutes = (seconds) => {
     return seconds / 60;
