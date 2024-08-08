@@ -40,6 +40,7 @@ const ToiletBreakContainer = ({ currentAvatarIndex, currentTimerValue }) => {
           <ReadingContainer
           currentAvatarIndex={currentAvatarIndex}
           initialTimerValue={currentTimerValue}
+          isToiletBreak={false}
           />
         </div>
       ) : (
@@ -50,7 +51,7 @@ const ToiletBreakContainer = ({ currentAvatarIndex, currentTimerValue }) => {
       )
     ) : (
       <div className="toilet-session-container">
-        <img src={avatarImages[currentAvatarIndex]} alt={`Avatar ${currentAvatarIndex + 1}`} className="avatar-toilet" />
+        <img src={avatarImages[currentAvatarIndex]} loading="lazy" alt={`Avatar ${currentAvatarIndex + 1}`} className="avatar-toilet" />
         <div className='toilet-options'>
           <img src={end} onClick={handleEndSession} className='toilet-end-btn'/>
           <p className='toilet-text'>Toilet Break</p>

@@ -32,7 +32,7 @@ const EndSessionContainer = ({ currentAvatarIndex }) => {
           </div>
       ) : 
       <div className='end-session-screen'>
-        <img src={avatarEndImages[currentAvatarIndex]} alt={`Avatar ${currentAvatarIndex + 1}`} className="avatar-end-image" />
+        <img src={avatarEndImages[currentAvatarIndex]} loading="lazy" alt={`Avatar ${currentAvatarIndex + 1}`} className="avatar-end-image" />
         <img src={backhome} onClick={handleBackHomeSession} className="back-home-btn" />
         {/* <p className='end-text'>We studied for 70 min together!</p> */}
 

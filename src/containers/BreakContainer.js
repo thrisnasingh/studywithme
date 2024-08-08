@@ -151,7 +151,7 @@ const BreakContainer = ({ currentAvatarIndex, initialTimerValue, breakTimeValue 
       )
     ) : (
       <div className="study-break-container">
-        <img src={avatarImages[currentAvatarIndex]} alt={`Avatar ${currentAvatarIndex + 1}`} className="avatar-break-image" />
+        <img src={avatarImages[currentAvatarIndex]} loading="lazy" alt={`Avatar ${currentAvatarIndex + 1}`} className="avatar-break-image" />
         <div className="small-timer-break-container">
         	<img src={end} onClick={handleEndSession} className="end-break-btn" />
 			{/* Timer Layout */}

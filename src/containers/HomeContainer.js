@@ -79,6 +79,7 @@ const HomeContainer = () => {
           <div className='avatar-container'>
           <img
             src={avatars[currentAvatarIndex]}
+            loading="lazy"
             className="avatar-img"
             onClick={handleAvatarClick}
           />

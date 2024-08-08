@@ -185,7 +185,7 @@ const ReadingContainer = ({ currentAvatarIndex, initialTimerValue}) => { // take
 				<img src={smalltimer} className="small-timer"/>
 				<div className="actual-timer">{timer}</div>
         {/* Toilet Break Button Layout */}
-          <img src={toilet} onClick={handleToiletBreak} className="start-toilet-btn" />
+          <img src={toilet} loading="lazy" onClick={handleToiletBreak} className="start-toilet-btn" />
         </div>
       </div>
     )
@@ -194,4 +194,3 @@ const ReadingContainer = ({ currentAvatarIndex, initialTimerValue}) => { // take
 }
 
 export default ReadingContainer;
-
